@@ -19,7 +19,7 @@ We find that while LLMs are generally aligned with human moral norms by default,
 1. `ppl.py` contains code for computing perplexity of moral and immoral text.
 2. `declarative_prompt.py` contains code for experiments with declarative prompt.
 3. `dpo.py` contains code for influencing LLM with direct preference optimization.
-4. 
+   
 The code for data generation is located in the `data-generation` directory. 
 
 - `translation.py`: Contains the code for data translation.
