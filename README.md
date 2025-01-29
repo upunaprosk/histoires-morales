@@ -1,6 +1,8 @@
 # Supplementary materials for the paper "HistoiresMorales: A French Dataset for Assessing Moral Alignment"
 
-**Dataset is now also available on HuggingFace: https://huggingface.co/datasets/LabHC/histoires_morales.**
+**Dataset is now also available on HuggingFace: https://huggingface.co/datasets/LabHC/histoires_morales**
+
+**Paper link: http://arxiv.org/abs/2501.17117**
 
 Aligning language models with human values is crucial, especially as they become more integrated into everyday life. 
 While models are often adapted to user preferences, it is equally important to ensure they align with moral norms and behaviours in real-world social situations. 
@@ -13,8 +15,14 @@ expressions of honesty in relationships, and responsibilities toward animals.
 To foster future research, we also conduct preliminary experiments on the alignment of multilingual models on French and English data and the robustness of the alignment.
 We find that while LLMs are generally aligned with human moral norms by default, they can be easily influenced with user-preference optimization for both moral and immoral data.
 
+## Dataset Card 
+
+Data statement is accessible [here](https://huggingface.co/datasets/LabHC/histoires_morales.). The Data Statement template is based on worksheets distributed at the 2020 LREC workshop on Data Statements by Emily M. Bender, Batya Friedman, and Angelina McMillan-Major.
 
 # Usage
+
+Requirements for running the code are mentioned in ```requirements.txt```. Seeds and other parameters, if any, are listed in the scripts.
+
 
 1. `ppl.py` contains code for computing perplexity of moral and immoral text.
 2. `declarative_prompt.py` contains code for experiments with declarative prompt.
@@ -25,10 +33,29 @@ The code for data generation is located in the `data-generation` directory.
 - `translation.py`: Contains the code for data translation.
 - `data-quality.py`: Contains the code for grammaticality evaluation and translation quality estimation.
 
-Requirements for running the code are mentioned in ```requirements.txt```. Seeds and other parameters if any are listed in the scripts.
+
+## LM-evaluation-harness
+
+`Histoires Morales` is integrated into the [lm-eval-harness framework](https://github.com/EleutherAI/lm-evaluation-harness). 
+To evaluate the model on Histoires Morales and Moral Stories datasets, use the following command:
+
+```bash
+model="croissantllm/CroissantLLMBase"
+output_path="outputs"
+lm_eval --model hf --model_args pretrained=$model --tasks histoires_morales,moral_stories --device cuda:0 --batch_size 8 --log_samples --output_path $output_path
+```
+
+After installing the required dependencies:
+```
+git clone --depth 1 https://github.com/EleutherAI/lm-evaluation-harness
+cd lm-evaluation-harness
+pip install -e .
+```
+For more details and a list of supported models, refer to [lm-eval-harness framework](https://github.com/EleutherAI/lm-evaluation-harness). 
+
 
 <details>
-    <summary>Experiments on Model Moral Alignment</summary>
+    <summary> Experiments on Model Moral Alignment</summary>
 
 #### Likelihood evaluation
 Setting: Norm + Context + Intention + Action, Action $\in \{moral, immoral\}$.
