@@ -75,4 +75,34 @@ We aim to influence the model to prefer either moral or immoral actions.
 
 </details>
 
+# Citation
 
+```
+[HISTOIRESMORALES: A French Dataset for Assessing Moral Alignment](https://aclanthology.org/2025.naacl-long.131/) (Leteno et al., NAACL 2025)
+```
+
+```
+@inproceedings{leteno-etal-2025-histoiresmorales,
+    title = "{HISTOIRESMORALES}: A {F}rench Dataset for Assessing Moral Alignment",
+    author = "Leteno, Thibaud  and
+      Proskurina, Irina  and
+      Gourru, Antoine  and
+      Velcin, Julien  and
+      Laclau, Charlotte  and
+      Metzler, Guillaume  and
+      Gravier, Christophe",
+    editor = "Chiruzzo, Luis  and
+      Ritter, Alan  and
+      Wang, Lu",
+    booktitle = "Proceedings of the 2025 Conference of the Nations of the Americas Chapter of the Association for Computational Linguistics: Human Language Technologies (Volume 1: Long Papers)",
+    month = apr,
+    year = "2025",
+    address = "Albuquerque, New Mexico",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2025.naacl-long.131/",
+    pages = "2590--2612",
+    ISBN = "979-8-89176-189-6",
+    abstract = "Aligning language models with human values is crucial, especially as they become more integrated into everyday life. While models are often adapted to user preferences, it is equally important to ensure they align with moral norms and behaviours in real-world social situations. Despite significant progress in languages like English and Chinese, French has seen little attention in this area, leaving a gap in understanding how LLMs handle moral reasoning in this language. To address this gap, we introduce HistoiresMorales, a French dataset derived from MoralStories, created through translation and subsequently refined with the assistance of native speakers to guarantee grammatical accuracy and adaptation to the French cultural context. We also rely on annotations of the moral values within the dataset to ensure their alignment with French norms. HistoiresMorales covers a wide range of social situations, including differences in tipping practices, expressions of honesty in relationships, and responsibilities toward animals. To foster future research, we also conduct preliminary experiments on the alignment of multilingual models on French and English data and the robustness of the alignment. We find that while LLMs are generally aligned with human moral norms by default, they can be easily influenced with user-preference optimization for both moral and immoral data."
+}
+
+```
