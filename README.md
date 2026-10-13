@@ -3,6 +3,7 @@
 **Dataset is now also available on HuggingFace: https://huggingface.co/datasets/LabHC/histoires_morales**
 
 **Paper link: http://arxiv.org/abs/2501.17117**
+**Leaderboard: https://huggingface.co/spaces/iproskurina/histoires-morales-leaderboard**
 
 Aligning language models with human values is crucial, especially as they become more integrated into everyday life. 
 While models are often adapted to user preferences, it is equally important to ensure they align with moral norms and behaviours in real-world social situations. 
