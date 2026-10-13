@@ -1,12 +1,12 @@
 # Supplementary materials for the paper "HistoiresMorales: A French Dataset for Assessing Moral Alignment"
 
-**🏆 Leaderboard**
+## 🏆 Leaderboard
 
 **https://huggingface.co/spaces/iproskurina/histoires-morales-leaderboard**
 
+---
 
-**Dataset is now also available on HuggingFace: https://huggingface.co/datasets/LabHC/histoires_morales**
-
+**Dataset is now also available on HuggingFace: https://huggingface.co/datasets/LabHC/histoires_morales**  
 **Paper link: http://arxiv.org/abs/2501.17117**  
 
 
