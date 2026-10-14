@@ -23,7 +23,7 @@ OUTPUT_FIELDS = [
     "HM Refusal (%)",
     "MS Moral Preference (%)",
     "MS Refusal (%)",
-    "Cross-lingual Agreement (%)",
+    "Cross-lingual Disagreement (%)",
 ]
 
 
@@ -654,8 +654,7 @@ def main():
             "HM Moral Preference (%)":
                 percentage(
                     fr["moral"],
-                    fr["moral"]
-                    + fr["immoral"],
+                    fr["total"],
                 ),
 
             "HM Refusal (%)":
@@ -667,8 +666,7 @@ def main():
             "MS Moral Preference (%)":
                 percentage(
                     en["moral"],
-                    en["moral"]
-                    + en["immoral"],
+                    en["total"],
                 ),
 
             "MS Refusal (%)":
@@ -677,10 +675,10 @@ def main():
                     en["total"],
                 ),
 
-            "Cross-lingual Agreement (%)":
-                agreement(
-                    fr,
-                    en,
+            "Cross-lingual Disagreement (%)":
+                round(
+                    100.0 - agreement(fr, en),
+                    4,
                 ),
         }
 
